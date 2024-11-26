@@ -2,6 +2,12 @@
 ##############################################################################
 ##                            Run the container                             ##
 ##############################################################################
+
+# Datei aufrufen
+# ./build_image_bullet.sh 
+# ./run_container_bullet.sh
+# python scripts_bullet/generate_tn_data.py 
+
 SRC_CONTAINER=/home/jovyan/workspace/src
 SRC_HOST="$(pwd)"/src
 DATA_CONTAINER=/home/jovyan/data
@@ -16,5 +22,7 @@ docker run \
   -v "$SRC_HOST":"$SRC_CONTAINER":rw \
   -v "$DATA_HOST":"$DATA_CONTAINER":rw \
   -e DISPLAY="$DISPLAY" \
-  --gpus all \
  rp2024/bullet
+
+
+ # --gpus all \

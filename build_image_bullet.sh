@@ -1,8 +1,11 @@
 #!/bin/bash
 
-render=nvidia
+#render=nvidia
+render=base
+
 uid=$(eval "id -u")
 gid=$(eval "id -g")
+#gid=1000
 
 docker build \
   --build-arg RENDER="$render" \
